@@ -1,0 +1,35 @@
+body {
+    background: #141E30;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1 {
+    color: #941F06;
+    text-align: center;
+    font-weight: bold;
+}
+.lijst {
+    color: #979291;
+    float: left;
+    font-size: large;
+    
+}
+.foto {
+    float: left;
+}
+nav {
+    text-align: center;
+    background-color: rgb(155, 14, 14);
+    padding: 10px;
+    border: 2px solid black;
+    text-transform: uppercase;
+    font-size: large;
+}
+a:link {
+        color: black;
+}
+a:visited {
+    color: rgb(80, 75, 75);
+}
+a:hover {
+    color: rgb(16, 2, 136);
+}
