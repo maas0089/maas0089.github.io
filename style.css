@@ -28,8 +28,27 @@ a:link {
         color: black;
 }
 a:visited {
-    color: rgb(80, 75, 75);
+    color: black;
 }
 a:hover {
-    color: rgb(16, 2, 136);
+    color: rgb(255, 60, 0);
+}
+ul {
+    padding-bottom: 50px;
+    list-style: circle;
+}
+.kop {
+    font-weight: bold;
+    font-size: 23px;
+    list-style: square;
+}
+#relevant_pages {
+    position: fixed;
+    bottom: 10px;
+    font-size: small;
+    margin-left: 20%;
+       
+}
+.sub_list {
+    list-style: initial;
 }
