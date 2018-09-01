@@ -7,13 +7,13 @@ h1 {
     text-align: center;
     font-weight: bold;
 }
-.lijst {
+.main_list {
     color: #979291;
     float: left;
     font-size: large;
     
 }
-.foto {
+.profielfoto {
     float: left;
 }
 nav {
@@ -26,6 +26,7 @@ nav {
 }
 a:link {
         color: black;
+        position: relative;
 }
 a:visited {
     color: black;
@@ -33,22 +34,43 @@ a:visited {
 a:hover {
     color: rgb(255, 60, 0);
 }
+a:active {
+    top: 2px;
+}
 ul {
     padding-bottom: 50px;
     list-style: circle;
 }
-.kop {
+.top_list {
     font-weight: bold;
     font-size: 23px;
     list-style: square;
 }
 #relevant_pages {
     position: fixed;
-    bottom: 10px;
+    bottom: 0px;
     font-size: small;
-    margin-left: 20%;
-       
+    left: 20%;
 }
 .sub_list {
     list-style: initial;
+}
+table {
+    color: white;
+    background-color: #141E30;
+    border:5px solid rgb(155, 14, 14);
+    position: absolute;
+    top: 18%;
+    bottom: 0px;
+    left: 12.5%;
+    right: 0px;
+    height: 75%;
+    width: 75%;
+}
+td {
+    border: 2px solid black;
+    text-align: center;
+}
+td:hover, th:hover {
+    background-color: rgb(255, 60, 0);
 }
