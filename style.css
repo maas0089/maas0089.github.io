@@ -1,5 +1,6 @@
 body {
-    background: #141E30;
+    background-image:url(./img/background_image.jpg);
+    background-size: cover;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 h1 {
@@ -18,18 +19,21 @@ h1 {
 }
 nav {
     text-align: center;
-    background-color: rgb(155, 14, 14);
     padding: 10px;
-    border: 2px solid black;
+    border: 5px solid transparent;
+    border-image: url(./img/nav_image.jpg) 30%;
     text-transform: uppercase;
     font-size: large;
 }
-a:link {
-        color: black;
-        position: relative;
-}
-a:visited {
-    color: black;
+a:link, a:visited {
+    text-decoration: none;
+    color: white;
+    text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; ;
+    position: relative;
 }
 a:hover {
     color: rgb(255, 60, 0);
@@ -57,8 +61,7 @@ ul {
 }
 table {
     color: white;
-    background-color: #141E30;
-    border:5px solid rgb(155, 14, 14);
+    border:5px solid black;
     position: absolute;
     top: 18%;
     bottom: 0px;
@@ -66,6 +69,7 @@ table {
     right: 0px;
     height: 75%;
     width: 75%;
+    border-spacing: 5px;
 }
 td {
     border: 2px solid black;
@@ -73,4 +77,19 @@ td {
 }
 td:hover, th:hover {
     background-color: rgb(255, 60, 0);
+}
+th {
+    border: 5px solid white;
+}
+tfoot {
+    background-color: black;
+}
+table, td, th, tfoot {
+    border-radius: 25px;
+}
+.credits {
+    font-size: 0.6em;
+}
+a.credits:link, a.credits:visited {
+    color: #979291;
 }
