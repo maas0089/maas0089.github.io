@@ -14,13 +14,21 @@ h1 {
     text-align: center;
     font-weight: bold;
 }
-.main_list {
+.profile_list {
     float: left;
     font-size: large;
-    
+    margin-left: 20px;
+}
+.profile_list table, .profile_list th, .profile_list td {
+    border: none;
+    vertical-align: top;
+}
+.profile_list td {
+    text-align: left;
 }
 .profielfoto {
     float: left;
+    margin-top: 20px;
 }
 nav {
     text-align: center;
@@ -42,7 +50,6 @@ a:active {
     top: 2px;
 }
 ul {
-    padding-bottom: 50px;
     list-style: circle;
 }
 .top_list {
@@ -58,9 +65,9 @@ ul {
 }
 .sub_list {
     list-style: initial;
+    padding: 10px 0;
 }
-table {
-    border: 5px solid rgb(102, 91, 91);
+.dashboard_table {
     position: absolute;
     top: 18%;
     bottom: 0px;
@@ -76,14 +83,14 @@ td {
     padding: 5 px;
     word-break: break-word;
 }
-td:hover, th:hover {
+.dashboard_table td:hover, .dashboard_table th:hover {
     background-color: white;
-    opacity: 0.8;
+        opacity: 0.8;
 }
 th {
     border: 5px solid rgb(114, 108, 108);
 }
-tfoot td {
+.dashboard_table tfoot td {
     border: none;
 }
 table, td, th, tfoot {
@@ -91,6 +98,7 @@ table, td, th, tfoot {
 }
 .credits {
     font-size: 0.6em;
+    float: right;
 }
 a.credits:link, a.credits:visited {
     color: #979291;
