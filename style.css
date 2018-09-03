@@ -2,14 +2,19 @@ body {
     background-image:url(./img/background_image.jpg);
     background-size: cover;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    color: rgb(190, 184, 178);
 }
 h1 {
-    color: #941F06;
+    color: rgb(190, 184, 178);
     text-align: center;
     font-weight: bold;
 }
 .main_list {
-    color: #979291;
     float: left;
     font-size: large;
     
@@ -19,23 +24,18 @@ h1 {
 }
 nav {
     text-align: center;
-    padding: 10px;
-    border: 5px solid transparent;
-    border-image: url(./img/nav_image.jpg) 30%;
     text-transform: uppercase;
     font-size: large;
+    border: 2px solid rgb(179, 160, 160);
+    border-radius: 25px;
+    padding: 5px;
 }
 a:link, a:visited {
     text-decoration: none;
-    color: white;
-    text-shadow: 
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000; ;
+    color: rgb(190, 184, 178);
     position: relative;
 }
-a:hover {
+a:hover, a.current {
     color: rgb(255, 60, 0);
 }
 a:active {
@@ -60,8 +60,7 @@ ul {
     list-style: initial;
 }
 table {
-    color: white;
-    border:5px solid black;
+    border: 5px solid rgb(102, 91, 91);
     position: absolute;
     top: 18%;
     bottom: 0px;
@@ -72,17 +71,20 @@ table {
     border-spacing: 5px;
 }
 td {
-    border: 2px solid black;
+    border: 2px solid rgb(179, 160, 160);
     text-align: center;
+    padding: 5 px;
+    word-break: break-word;
 }
 td:hover, th:hover {
-    background-color: rgb(255, 60, 0);
+    background-color: white;
+    opacity: 0.8;
 }
 th {
-    border: 5px solid white;
+    border: 5px solid rgb(114, 108, 108);
 }
-tfoot {
-    background-color: black;
+tfoot td {
+    border: none;
 }
 table, td, th, tfoot {
     border-radius: 25px;
@@ -92,4 +94,20 @@ table, td, th, tfoot {
 }
 a.credits:link, a.credits:visited {
     color: #979291;
+}
+.table_legend {
+    list-style: none;
+    padding: 0 5px;
+}
+.table_legend li {
+    margin: 60px 0;
+}
+.onvoldoende {
+    color: red;
+}
+.afgerond {
+    color: green;
+}
+#nbsa {
+    color: blue;
 }
