@@ -1,8 +1,7 @@
 /* ↓ Betreft de hele site ↓ */
 
 body {
-    /* background-image:url(./img/background_image.jpg); */
-    background-color: red;
+    background-image:url(./img/background_image.jpg);
     background-size: cover;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-shadow: 
