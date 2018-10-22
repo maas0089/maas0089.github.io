@@ -221,6 +221,22 @@ table, td, th, tfoot {
     text-align: left;
 }
 
+/* Betreft beroepsbeeld pagina */
+.beroepsbeeld_container {
+    display: flex;
+}
+
+.beroepsbeeld_text {
+    text-align: center;
+}
+
+.beroepsbeeld_logos_left, .beroepsbeeld_logos_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10vh 2.5vw;
+}
+
 
 /* ↓ Betreft secret pagina ↓ */
 
