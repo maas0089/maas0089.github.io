@@ -11,11 +11,11 @@
 |
 */
 
+Route::resource('opdrachten', 'AssignmentController');
+
+Route::resource('dashboard', 'CoursesController');
+
 Route::get('/', 'PagesController@index');
-
-Route::get('/opdrachten', 'PagesController@opdrachten');
-
-Route::get('/dashboard', 'CoursesController@index');
 
 Route::get('/contact', 'PagesController@contact');
 

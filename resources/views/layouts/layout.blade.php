@@ -32,22 +32,22 @@
                             <a class="nav-link" href="..">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./opdrachten">Opdrachten</a>
+                            <a class="nav-link" href="/opdrachten">Opdrachten</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./dashboard">Dashboard</a>
+                            <a class="nav-link" href="/dashboard">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./beroepsbeeld">Beroepsbeeld</a>
+                            <a class="nav-link" href="/beroepsbeeld">Beroepsbeeld</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./motivatie">Motivatie</a>
+                            <a class="nav-link" href="/motivatie">Motivatie</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./profiel">Profiel</a>
+                            <a class="nav-link" href="/profiel">Profiel</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./contact">Contact</a>
+                            <a class="nav-link" href="/contact">Contact</a>
                         </li>
 
                     </ul>

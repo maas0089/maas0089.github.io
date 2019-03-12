@@ -2,9 +2,10 @@
 
 @section('pageTitle', 'Opdrachten')
 
-@section('header', 'Opdrachten')
+@section('header', 'Opdracht')
 
 @section('content')
 
+    {{$assignment}}
 
 @endsection

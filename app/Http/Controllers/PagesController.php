@@ -13,9 +13,9 @@ class PagesController extends Controller
         return view('home');
     }
 
-    public function opdrachten() {
-        return view('opdrachten');
-    }
+//    public function opdrachten() {
+//        return view('opdrachten');
+//    }
 
 //    public function dashboard() {
 //
