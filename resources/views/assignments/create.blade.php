@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <form method="POST" action="/opdrachten">
+    <form method="POST" action={{route('opdrachten.index')}}>
 
         {{csrf_field()}}
 

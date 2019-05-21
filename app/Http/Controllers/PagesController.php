@@ -2,43 +2,31 @@
 
 namespace App\Http\Controllers;
 
-use App\Experiment;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-
-    public function index() {
-       // $name = request('name', 'Anonymous');
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
         return view('home');
     }
 
-//    public function opdrachten() {
-//        return view('opdrachten');
-//    }
+    public function error500() {
+        return view('errors.500');
+    }
 
-//    public function dashboard() {
-//
-//        $grades = CoursesController::grades();
-//
-//        return view('dashboard')->withCourseResults($grades);
-//    }
+    public function error403() {
+        return view('errors.403');
+    }
 
     public function contact() {
         $contacts = \App\Contact::all();
         return view('contact')->withContacts($contacts);
-    }
-
-    public function beroepsbeeld() {
-        return view('beroepsbeeld');
-    }
-
-    public function motivation() {
-        return view('motivation');
-    }
-
-    public function profile() {
-        return view('profile');
     }
 
 }

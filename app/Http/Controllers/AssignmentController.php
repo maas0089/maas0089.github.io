@@ -8,6 +8,19 @@ use Illuminate\Http\Request;
 class AssignmentController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('student');
+
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -37,13 +50,14 @@ class AssignmentController extends Controller
      */
     public function store(Request $request)
     {
-        $assignment = new Assignment();
-        $assignment->project_name = $request->post('project_name');
-        $assignment->image_url = $request->post('image_url');
-        $assignment->description = $request->post('description');
-        $assignment->save();
+        Assignment::create(request()->all());
+//        Assignment::create([
+//            'project_name' => request('project_name'),
+//            'image_url' => request('image_url'),
+//            'description' => request('description')
+//        ]);
 
-        return redirect('./opdrachten');
+        return redirect(route('opdrachten.index'))->withSuccess('Item toegevoegd!');
     }
 
     /**
@@ -54,9 +68,7 @@ class AssignmentController extends Controller
      */
     public function show(Assignment $assignment)
     {
-        dd($assignment);
-        $a = Assignment::all()->where('id', $assignment);
-        return view('assignments.show')->withAssignment($a);
+        return view('assignments.show')->withAssignment($assignment);
     }
 
     /**
@@ -67,7 +79,7 @@ class AssignmentController extends Controller
      */
     public function edit(Assignment $assignment)
     {
-        //
+        return view('assignments.edit')->withAssignment($assignment);
     }
 
     /**
@@ -79,7 +91,12 @@ class AssignmentController extends Controller
      */
     public function update(Request $request, Assignment $assignment)
     {
-        //
+        $assignment->project_name = $request->get('project_name');
+        $assignment->image_url = $request->get('image_url');
+        $assignment->description = $request->get('description');
+        $assignment->save();
+
+        return redirect(route('opdrachten.index'))->withSuccess('Wijziging opgeslagen!');
     }
 
     /**
@@ -90,6 +107,8 @@ class AssignmentController extends Controller
      */
     public function destroy(Assignment $assignment)
     {
-        //
+        $assignment->delete();
+
+        return redirect(route('opdrachten.index'))->with('success', 'Opdracht verwijderd!');
     }
 }

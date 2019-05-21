@@ -4,12 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Course extends Model
+class Term extends Model
 {
     public $timestamps = false;
 
-    public function term()
+    public function courses()
     {
-        return $this->hasOne('App\Term', 'id',"term_id");
+        return $this->hasMany('App\Course');
     }
 }
