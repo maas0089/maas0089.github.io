@@ -18,5 +18,12 @@ class Teacher
     {
         if (Auth::check() && Auth::user()->role == 'teacher') {
             return $next($request);
-        }    }
+        }
+        else if (Auth::check() && Auth::user()->role == 'admin') {
+            return $next($request);
+        }
+        else {
+            return redirect(route('error403'));
+        }
+    }
 }

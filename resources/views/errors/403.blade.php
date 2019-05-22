@@ -4,7 +4,7 @@
 
 @section('sublinks', '')
 
-@section('header', 'Sorry, deze pagina is alleen toegankelijk voor studenten')
+@section('header', 'Sorry, deze pagina is niet toegankelijk')
 
 @section('subheader', '')
 

@@ -16,7 +16,8 @@ class AssignmentController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('student');
+//        $this->middleware('student', ['only' => ['index', 'show']]);
+        $this->middleware('admin', ['only' => ['create', 'store', 'edit', 'update', 'delete']]);
 
     }
 
@@ -51,12 +52,6 @@ class AssignmentController extends Controller
     public function store(Request $request)
     {
         Assignment::create(request()->all());
-//        Assignment::create([
-//            'project_name' => request('project_name'),
-//            'image_url' => request('image_url'),
-//            'description' => request('description')
-//        ]);
-
         return redirect(route('opdrachten.index'))->withSuccess('Item toegevoegd!');
     }
 
