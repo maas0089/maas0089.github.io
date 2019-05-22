@@ -1,4 +1,4 @@
-#Welkom op mijn portfolio website!
+# Welkom op mijn portfolio website!
 
 **Dit portfolio wordt gebruikt om te oefenen met nieuwe technieken waar ik door mijn studie heen
 mee te maken krijg.**
