@@ -17,10 +17,10 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">Naam</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required>
 
                                 @if ($errors->has('name'))
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" id="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                 @endif
@@ -34,7 +34,7 @@
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
 
                                 @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" id="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
@@ -45,11 +45,17 @@
                             <label for="role" class="col-md-4 col-form-label text-md-right">Rol</label>
 
                             <div class="col-md-6">
-                                <select name="role" class="form-control" >
+                                <select name="role" class="form-control {{ $errors->has('role') ? ' is-invalid' : '' }}" >
                                     <option value="student">Student</option>
                                     <option value="teacher">Docent</option>
                                     <option value="family">Familie</option>
                                 </select>
+
+                                @if ($errors->has('role'))
+                                    <span class="invalid-feedback" id="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('role') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
 
@@ -60,7 +66,7 @@
                                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
                                 @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" id="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
@@ -95,3 +101,7 @@
     </div>
 </div>
 @endsection
+
+@push('js')
+    <script src="{{asset('js/register.js')}}"></script>
+@endpush

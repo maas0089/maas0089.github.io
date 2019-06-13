@@ -52,7 +52,23 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
-            'role' => 'required|in:admin,student,teacher,family', //validate role input
+            'role' => 'required|in:student,teacher,family', //validate role input
+        ], [
+            //Custom error messages to be displayed
+            'name.required' => 'Vul een naam in.',
+            'name.max' => 'De naam mag niet langer zijn dan 255 tekens.',
+
+            'email.required' => 'Vul een e-mail adres in.',
+            'email.email' => 'Vul een geldig email adres in. (iemand@example.com)',
+            'email.max' => 'Het e-mail adres mag niet langer zijn dan 255 tekens.',
+            'email.unique' => 'Dit e-mail adres is al in gebruik.',
+
+            'password.required' => 'Vul een wachtwoord in.',
+            'password.min' => 'Het wachtwoord moet minimaal 6 tekens lang zijn.',
+            'password.confirmed' => 'De ingevoerde wachtwoorden komen niet overeen.',
+
+            'role.required' => 'Geef een rol aan.',
+            'role.in' => 'Dit is geen geldige rol.',
         ]);
     }
 
