@@ -103,5 +103,5 @@
 @endsection
 
 @push('js')
-    <script src="{{asset('js/register.js')}}"></script>
+    <script src="{{secure_asset('js/register.js')}}"></script>
 @endpush
