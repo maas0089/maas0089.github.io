@@ -59,7 +59,7 @@ class RegisterController extends Controller
             'name.max' => 'De naam mag niet langer zijn dan 255 tekens.',
 
             'email.required' => 'Vul een e-mail adres in.',
-            'email.email' => 'Vul een geldig email adres in.',
+            'email.email' => 'Vul een geldig e-mail adres in.',
             'email.max' => 'Het e-mail adres mag niet langer zijn dan 255 tekens.',
             'email.unique' => 'Dit e-mail adres is al in gebruik.',
 
